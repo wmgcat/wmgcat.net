@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+	<head>
+		<title>my web site</title>
+		<link rel = 'stylesheet' href = './default.css'/>
+		<meta name = 'viewport' content = 'width=device-width, initial-scale=1.0'/>
+		<meta charset = 'utf-8'/>
+		<script type = 'text/javascript' src = './web.js'></script>
+	</head>
+	<body>
+		<div class = 'info'>
+			<iframe id = 'gameframe' src = ''></iframe>
+			<h1 class = 'title'>не известно</h1>
+			<p class = 'description'>нет описания</p>
+		</div>
+		<script type = 'text/javascript'>
+			
+			window.onload = function() {
+				let url = new URLSearchParams(window.location.search);
+				let frame = document.getElementById('gameframe');
+				frame.src = './games/' + url.get('name') + '/index.html';
+				add_config('./games/' + url.get('name') + '/config.js', function(e) {
+					document.querySelector('.info').style.width = data.width + 'px';
+					frame.height = data.height;
+					let title = document.querySelector('.title'), descr = document.querySelector('.description')
+					title.style.color = data.colour;
+					title.innerText = data.title;
+					
+					descr.width = data.width;
+					descr.innerText = data.description;
+				});
+			}
+		</script>
+	</body>
+</html>

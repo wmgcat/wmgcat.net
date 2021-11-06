@@ -1,7 +1,6 @@
 * { padding: 0; margin: 0; }
 body {
 	display: inline-flex;
-	justify-content: space-between;
 	align-items: center;
 	flex-direction: column;
 	width: 100vw;
@@ -78,4 +77,25 @@ body {
 .game .info h1 {
 	color: #070013;
 	margin-left: 5%;
+}
+/* player */
+#gameframe {
+	width: 100%;
+	outline: none;
+	border: 0;
+}
+div.info {
+	display: inline-flex;
+	width: 50%;
+	flex-direction: column;
+	justify-content: center;
+	height: 100vh;
+}
+div.info .title {
+	color: #fff;
+}
+div.info .description {
+	color: #fff;
+	background: #070013;
+	padding: 10px;
 }

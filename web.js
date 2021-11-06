@@ -2,6 +2,7 @@ function add_block(name, screens) {
 	let content = document.getElementById('content'),
 		block = document.createElement('div');
 	block.className = 'game';
+
 	block.setAttribute('alt', name);
 	let banner = document.createElement('div');
 	banner.className = 'banner';
@@ -20,7 +21,8 @@ function add_block(name, screens) {
 	banner.appendChild(imgbanner);
 	block.appendChild(banner);
 	let info = document.createElement('a');
-	info.href = './games/' + name + '/index.html';
+	info.href = './player.html?name=' + name;
+	//info.href = './games/' + name + '/index.html';
 	info.className = 'info';
 	let avatar = document.createElement('img');
 	avatar.src = './games/' + name + '/avatar.png';
@@ -31,34 +33,17 @@ function add_block(name, screens) {
 	info.appendChild(title);
 	block.appendChild(info);
 	content.appendChild(block);
-}
-
-
-
-window.onload = function() {
-	add_block('wabaton', ['screen1.png', 'screen2.png', 'screen3.png']);
-	add_block('wabaton', ['screen1.png', 'screen2.png', 'screen3.png']);
-	add_block('wabaton', ['screen1.png', 'screen2.png', 'screen3.png']);
-	add_block('wabaton', ['screen1.png', 'screen2.png', 'screen3.png']);
-	add_block('wabaton', ['screen1.png', 'screen2.png', 'screen3.png']);
-	add_block('wabaton', ['screen1.png', 'screen2.png', 'screen3.png']);
-	add_block('wabaton', ['screen1.png', 'screen2.png', 'screen3.png']);
-	add_block('wabaton', ['screen1.png', 'screen2.png', 'screen3.png']);
-	document.querySelectorAll('.game').forEach(function(block) {
-		block.onmouseenter = function() {
-			let screens = block.querySelector('.screenshots').children, banner = block.querySelector('.banner > img');
-			block.setAttribute('banner', banner.src);
-			block.count = 0
-			function screenShow() {
-				banner.src = screens[block.count].src;
-				block.count = (block.count + 1) % screens.length;
-			}
-			block.timer = setInterval(screenShow, 1000);
-			screenShow();
-		}
-		block.onmouseleave = function() {
-			block.querySelector('.banner > img').src = block.getAttribute('banner');
-			clearInterval(block.timer);
-		}
+	// configure:
+	add_config('./games/' + name + '/config.js', function() {
+		block.style.background = data.colour;
+		info.style.boxShadow = '0 0 15px ' + data.colour;
 	});
+}
+function add_config(path, func) {
+	let script = document.createElement('script');
+	script.type = 'text/javascript';
+	script.src = path;
+	script.onerror = function() { console.log('error config load!'); }
+	script.onload = func;
+	document.body.appendChild(script);
 }

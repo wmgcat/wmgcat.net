@@ -16,5 +16,28 @@
 поддерживаю геймдев и все что с этим связано, люблю 2д, люблю пиксели.</p>
 		</div>
 		<div id = 'content'></div>
+		<script type = 'text/javascript'>
+			window.onload = function() {
+				add_block('wabaton', ['screen1.png', 'screen2.png', 'screen3.png']);
+				add_block('why not frog', ['screen1.png', 'screen2.png', 'screen3.png']);
+				document.querySelectorAll('.game').forEach(function(block) {
+					block.onmouseenter = function() {
+						let screens = block.querySelector('.screenshots').children, banner = block.querySelector('.banner > img');
+						block.setAttribute('banner', banner.src);
+						block.count = 0
+						function screenShow() {
+							banner.src = screens[block.count].src;
+							block.count = (block.count + 1) % screens.length;
+						}
+						block.timer = setInterval(screenShow, 1000);
+						screenShow();
+					}
+					block.onmouseleave = function() {
+						block.querySelector('.banner > img').src = block.getAttribute('banner');
+						clearInterval(block.timer);
+					}
+				});
+			}
+		</script>
 	</body>
 </html>
