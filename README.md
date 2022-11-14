@@ -1,6 +1,6 @@
 # web
 web page
 
-wmgcat.github.io/web/index.html
+https://wmgcat.github.io/wmgcat.net
 
 my web page
