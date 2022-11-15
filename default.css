@@ -1,3 +1,9 @@
+:root {
+  --background: '#1e0528';
+  --link: '#9664e6';
+  --text: '#e1cde1';
+  --title: '#fff096';
+}
 * { padding: 0; margin: 0; }
 body {
 	display: inline-flex;
@@ -5,9 +11,7 @@ body {
 	flex-direction: column;
 	width: 100vw;
 	height: 100vh;
-	background: #070013;
-	background:  url('./img/background.png');
-	background-attachment: fixed;
+	background: var(--background);
 }
 #content {
 	width: 100%;
@@ -36,14 +40,13 @@ body {
 	box-shadow:  0 0 25px #FCF572;
 }
 .label h1 {
-	color: #F959A5;
+	color: var(--title);
 	text-align: center;
 }
 .label p {
 	padding: 5px;
 	width: 500px;
-	background: #070013;
-	color: #fff;
+	color: var(--text);
 	text-align: center;
 }
 
@@ -53,7 +56,7 @@ body {
 	width: 400px;
 	display: flex;
 	flex-direction: column;
-	background: #FCF572;
+	background: var(--background);
 }
 .game .banner .screenshots { display: none; }
 .game .banner {
@@ -75,7 +78,7 @@ body {
 .game .info img { width:  25%; }
 .game a { text-decoration: none; }
 .game .info h1 {
-	color: #070013;
+	color: var(--title);
 	margin-left: 5%;
 }
 /* player */
@@ -92,10 +95,10 @@ div.info {
 	height: 100vh;
 }
 div.info .title {
-	color: #fff;
+	color: var(--title);
 }
 div.info .description {
-	color: #fff;
+	color: var(--text);
 	background: #070013;
 	padding: 10px;
 }
