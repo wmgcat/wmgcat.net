@@ -3,102 +3,65 @@
   --link: #9664e6;
   --text: #e1cde1;
   --title: #fff096;
+  --bold: #fff0ff;
+  --subtext: #3c285a;
+  --select: #ff8c64;
+  --gap: 25px;
+  --font: Consolas;
+  --avatar: 256px;
 }
+b { color: var(--bold); }
 * { padding: 0; margin: 0; }
 body {
 	display: inline-flex;
 	align-items: center;
+  justify-content: space-around;
 	flex-direction: column;
 	width: 100vw;
 	height: 100vh;
 	background: var(--background);
 }
-#content {
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-  	justify-content: center;
-	gap: 2%;
-	padding-bottom: 5%;
-}
 
-.label {
-	margin: 50px;
+header {
+  width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+  align-items: center;
+  gap: var(--gap);
 }
-
 .avatar {
-	display: flex;
-	justify-content: center;
-	margin-bottom: 20px;
+	width: var(--avatar);
+	height: var(--avatar);
+  border: 2px solid var(--link);
 }
-.avatar img {
-	width: 250px;
-	height: 250px;
-	box-shadow:  0 0 25px #FCF572;
+.title, .link { text-transform: uppercase; }
+.title {
+  font: bold 2em var(--font);
+  color: var(--title);
+  cursor: default;
 }
-.label h1 {
-	color: var(--title);
-	text-align: center;
+.link {
+  font: bold 1.25em var(--font);
+  color: var(--link);
 }
-.label p {
-	padding: 5px;
-	width: 500px;
-	color: var(--text);
-	text-align: center;
+.link:hover { color: var(--select); }
+p {
+  color: var(--text);
+  text-align: justify;
+  font: 1.25em var(--font);
+  cursor: default;
 }
+header p { width: 50%; }
 
-
-/* games styles */
-.game {
-	width: 400px;
-	display: flex;
-	flex-direction: column;
-	background: var(--background);
+ul.menu {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: var(--gap);
 }
-.game .banner .screenshots { display: none; }
-.game .banner {
-	z-index: 1;
-	width: 100%;
-	height: 250px;
-}
-.game .banner img {
-	width:  100%;
-	height: 100%;
-}
-.game .info {
-	box-shadow:  0 0 15px #FCF572;
-	display: flex;
-	flex-direction: row;
-	justify-content: left;
-	align-items: center;
-}
-.game .info img { width:  25%; }
-.game a { text-decoration: none; }
-.game .info h1 {
-	color: var(--title);
-	margin-left: 5%;
-}
-/* player */
-#gameframe {
-	width: 100%;
-	outline: none;
-	border: 0;
-}
-div.info {
-	display: inline-flex;
-	width: 50%;
-	flex-direction: column;
-	justify-content: center;
-	height: 100vh;
-}
-div.info .title {
-	color: var(--title);
-}
-div.info .description {
-	color: var(--text);
-	background: #070013;
-	padding: 10px;
+footer {
+  color: var(--subtext);
+  font: 1em Consolas;
+  font-weight: bold;
 }

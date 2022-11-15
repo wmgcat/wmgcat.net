@@ -1,25 +1,30 @@
 <!doctype html>
 <html>
-	<head>
-		<title>my web site</title>
+  <head>
+		<title>wmgcat.net</title>
 		<link rel = 'stylesheet' href = './default.css'/>
 		<meta name = 'viewport' content = 'width=device-width, initial-scale=1.0'/>
 		<meta charset = 'utf-8'/>
 		<script type = 'text/javascript' src = './web.js'></script>
 	</head>
 	<body>
-		<div class = 'label'>
-			<div class = 'avatar'><img src = './img/avatar.png' alt = 'img.avatar'/></div>
-			<h1>wmgcat</h1>
-			<p>делаю игры, рисую картинки, пытаюсь в музыку, теперь еще и немного моделю.
-багаж языков: gml, javascript, python, lua.
-поддерживаю геймдев и все что с этим связано, люблю 2д, люблю пиксели.</p>
-		</div>
-		<div id = 'content'></div>
-		<script type = 'text/javascript'>
+		<header>
+			<img class = 'avatar' src = './img/avatar.png' alt = 'img.avatar'>
+			<h1 class = 'title'>wmgcat</h1>
+			<p><b>разработчик игр</b> и художник. использую: <b>aseprite, vim, javascript, pico8, tic80</b> и все что с этим связано.</p> 
+		</header>
+    <ul class = 'menu'>
+      <li><a href = '#' class = 'link'>игры</a></li>
+      <li><a href = '#' class = 'link'>галерея</a></li>
+      <li><a href = '#' class = 'link'>ссылки</a></li>
+    </ul>	
+		<footer>
+      <date>2022</date> by wmgcat
+    </footer>
+    <script type = 'text/javascript'>
 			window.onload = function() {
-				add_block('wabaton', ['screen1.png', 'screen2.png', 'screen3.png']);
-				add_block('why not frog', ['screen1.png', 'screen2.png', 'screen3.png']);
+				//add_block('wabaton', ['screen1.png', 'screen2.png', 'screen3.png']);
+				//add_block('why not frog', ['screen1.png', 'screen2.png', 'screen3.png']);
 				document.querySelectorAll('.game').forEach(function(block) {
 					block.onmouseenter = function() {
 						let screens = block.querySelector('.screenshots').children, banner = block.querySelector('.banner > img');

@@ -34,10 +34,10 @@ function add_block(name, screens) {
 	block.appendChild(info);
 	content.appendChild(block);
 	// configure:
-	add_config('./games/' + name + '/config.js', function() {
+	/*add_config('./games/' + name + '/config.js', function() {
 		block.style.background = data.colour;
 		info.style.boxShadow = '0 0 15px ' + data.colour;
-	});
+	});*/
 }
 function add_config(path, func) {
 	let script = document.createElement('script');
