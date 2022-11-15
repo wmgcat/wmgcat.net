@@ -1,8 +1,8 @@
 :root {
-  --background: '#1e0528';
-  --link: '#9664e6';
-  --text: '#e1cde1';
-  --title: '#fff096';
+  --background: #1e0528;
+  --link: #9664e6;
+  --text: #e1cde1;
+  --title: #fff096;
 }
 * { padding: 0; margin: 0; }
 body {
