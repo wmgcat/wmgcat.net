@@ -10,7 +10,10 @@
   --font: Consolas;
   --avatar: 256px;
 }
-b { color: var(--bold); }
+b {
+  animation: bold 30s;
+  animation-iteration-count: infinite;
+}
 * { padding: 0; margin: 0; }
 body {
 	display: inline-flex;
@@ -64,4 +67,13 @@ footer {
   color: var(--subtext);
   font: 1em Consolas;
   font-weight: bold;
+  margin-bottom: var(--gap);
+}
+
+@keyframes bold {
+  0% { color: var(--bold); }
+  25% { color: var(--title); }
+  50% { color: var(--link); }
+  75% { color: var(--select); }
+  100% { color: var(--bold); }
 }

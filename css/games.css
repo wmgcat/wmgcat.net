@@ -1,0 +1,8 @@
+ul.content {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: var(--gap);
+  justify-content: center;
+  margin: 2%;
+}
