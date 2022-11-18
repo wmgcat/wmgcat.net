@@ -11,38 +11,22 @@
 		<header>
 			<img class = 'avatar' src = './img/avatar.png' alt = 'img.avatar'>
 			<h1 class = 'title'>wmgcat</h1>
-			<p><b>разработчик игр</b> и художник. использую: <b>aseprite, vim, javascript, pico8, tic80</b> и все что с этим связано.</p> 
+			<p lang-id = 'me-description'>description</p> 
 		</header>
     <ul class = 'menu'>
-      <li><a href = './source/games.html' class = 'link'>игры</a></li>
-      <li><a href = './source/gallery.html' class = 'link'>галерея</a></li>
-      <li><a href = './source/links.html' class = 'link'>ссылки</a></li>
+      <li><a href = './source/games.html' class = 'link' lang-id = 'games'>games</a></li>
+      <li><a href = './source/gallery.html' class = 'link' lang-id = 'gallery'>gallery</a></li>
+      <li><a href = './source/links.html' class = 'link' lang-id = 'links'>links</a></li>
     </ul>	
 		<footer>
-      <date>2022</date> by wmgcat
+      <ul class = 'lang'></ul>
+      <span><date>2022</date> by wmgcat</span>
     </footer>
-    <script type = 'text/javascript'>
-			window.onload = function() {
-				//add_block('wabaton', ['screen1.png', 'screen2.png', 'screen3.png']);
-				//add_block('why not frog', ['screen1.png', 'screen2.png', 'screen3.png']);
-				document.querySelectorAll('.game').forEach(function(block) {
-					block.onmouseenter = function() {
-						let screens = block.querySelector('.screenshots').children, banner = block.querySelector('.banner > img');
-						block.setAttribute('banner', banner.src);
-						block.count = 0
-						function screenShow() {
-							banner.src = screens[block.count].src;
-							block.count = (block.count + 1) % screens.length;
-						}
-						block.timer = setInterval(screenShow, 1000);
-						screenShow();
-					}
-					block.onmouseleave = function() {
-						block.querySelector('.banner > img').src = block.getAttribute('banner');
-						clearInterval(block.timer);
-					}
-				});
-			}
-		</script>
-	</body>
+	  <script type = 'text/javascript'>
+      window.onload = () => {
+        add_lang('./lang/ru.json');
+        add_lang('./lang/en.json');
+      }
+    </script>
+  </body>
 </html>

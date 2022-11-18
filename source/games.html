@@ -6,7 +6,7 @@
 		<link rel = 'stylesheet' href = '../css/games.css'/>
     <meta name = 'viewport' content = 'width=device-width, initial-scale=1.0'/>
 		<meta charset = 'utf-8'/>
-		<script type = 'text/javascript' src = './web.js'></script>
+		<script type = 'text/javascript' src = '../web.js'></script>
 	</head>
 	<body>
     <header>
@@ -24,7 +24,14 @@
       <li><iframe frameborder="0" src="https://itch.io/embed/355077?bg_color=390417&amp;fg_color=fff&amp;link_color=cd2b58&amp;border_color=ec4a77" width="552" height="167"><a href="https://wmgcat.itch.io/super-tortle">super tortle by wmgcat</a></iframe></li>
     </ul>
 	  <footer>
-      <date>2022</date> by wmgcat
+      <ul class = 'lang'></ul>
+      <span><date>2022</date> by wmgcat</span>
     </footer>
+    <script type = 'text/javascript'>
+      window.onload = () => {
+        add_lang('../lang/ru.json');
+        add_lang('../lang/en.json');
+      }
+    </script>
   </body>
 </html>

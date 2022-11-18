@@ -68,7 +68,26 @@ footer {
   font: 1em Consolas;
   font-weight: bold;
   margin-bottom: var(--gap);
+  text-align: center;
 }
+
+ul.lang {
+  display: flex;
+  justify-content: center;
+  margin: var(--gap);
+  gap: var(--gap);
+  list-style: none;
+  color: var(--subtext);
+}
+ul.lang li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+ul.lang li.select {
+  text-decoration: underline;
+  color: var(--text);
+}
+
 
 @keyframes bold {
   0% { color: var(--bold); }
