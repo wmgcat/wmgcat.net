@@ -87,8 +87,6 @@ ul.lang li.select {
   text-decoration: underline;
   color: var(--text);
 }
-
-
 @keyframes bold {
   0% { color: var(--bold); }
   25% { color: var(--title); }

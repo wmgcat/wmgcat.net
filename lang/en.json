@@ -1,7 +1,6 @@
 dataLang = {
   'title': "english",
   'me-description': "gamedev and artist",
-  'games': "games",
-  'gallery': "gallery",
-  'links': "links"
+  'games': "games", 'gallery': "gallery",
+  'links': "links", 'back': "back"
 };

@@ -1,7 +1,6 @@
 dataLang = {
   'title': "русский",
   'me-description': "разработчик игр и художник",
-  'games': "игры",
-  'gallery': "галерея",
-  'links': "ссылки"
+  'games': "игры", 'gallery': "галерея",
+  'links': "ссылки", 'back': "назад"
 };

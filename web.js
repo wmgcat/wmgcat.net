@@ -9,6 +9,7 @@ const add_lang = file => {
       let langmenu = document.querySelector('ul.lang');
       if (langmenu) {
         LANGS[dataLang.title] = dataLang;
+        console.log(LANGS[dataLang.title]);
         let li = document.createElement('li');
         li.innerText = dataLang.title;
         langmenu.appendChild(li); 
