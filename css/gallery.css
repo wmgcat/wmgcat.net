@@ -1,0 +1,13 @@
+body {
+  justify-content: start !important;
+}
+ul.content {
+  display: inline-flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: var(--gap);
+  justify-content: center;
+  margin: 2%;
+}
+ul.content li { width: 40%; }
+.gallery { width: 100%; }
