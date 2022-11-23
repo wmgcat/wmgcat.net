@@ -2,21 +2,21 @@
 <html>
   <head>
 		<title>wmgcat.net</title>
-		<link rel = 'stylesheet' href = './css/main.css'/>
+		<link rel = 'stylesheet' href = './source/css/main.css'/>
 		<meta name = 'viewport' content = 'width=device-width, initial-scale=1.0'/>
 		<meta charset = 'utf-8'/>
-		<script type = 'text/javascript' src = './web.js'></script>
+		<script type = 'text/javascript' src = './source/js/lang.js'></script>
 	</head>
 	<body>
 		<header>
-			<img class = 'avatar' src = './img/avatar.png' alt = 'img.avatar'>
+			<img class = 'avatar' src = './source/img/avatar.png' alt = 'img.avatar'>
 			<h1 class = 'title'>wmgcat</h1>
 			<p lang-id = 'me-description'>description</p> 
 		</header>
     <ul class = 'menu'>
-      <li><a href = './source/games.html' class = 'link' lang-id = 'games'>games</a></li>
-      <li><a href = './source/gallery.html' class = 'link' lang-id = 'gallery'>gallery</a></li>
-      <li><a href = './source/links.html' class = 'link' lang-id = 'links'>links</a></li>
+      <li><a href = './source/pages/games.html' class = 'link' lang-id = 'games'>games</a></li>
+      <li><a href = './source/pages/gallery.html' class = 'link' lang-id = 'gallery'>gallery</a></li>
+      <li><a href = './source/pages/links.html' class = 'link' lang-id = 'links'>links</a></li>
     </ul>	
 		<footer>
       <ul class = 'lang'></ul>
@@ -24,8 +24,8 @@
     </footer>
 	  <script type = 'text/javascript'>
       window.onload = () => {
-        add_lang('./lang/ru.json');
-        add_lang('./lang/en.json');
+        add_lang('./source/lang/ru.json');
+        add_lang('./source/lang/en.json');
       }
     </script>
   </body>
