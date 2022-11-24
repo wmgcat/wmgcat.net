@@ -9,8 +9,18 @@ ul.content {
   justify-content: center;
   margin: 2%;
 }
-ul.content li { width: 40%; }
-.gallery { width: 100%; }
+ul.content li {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  cursor: pointer;
+  overflow: hidden;
+}
+.gallery {
+  width: 100%;
+  transition: all .25s ease;
+}
+.gallery:hover { transform: scale(1.25); }
 
 #preview {
   display: none;
