@@ -7,6 +7,7 @@
 		<meta name = 'viewport' content = 'width=device-width, initial-scale=1.0'/>
 		<meta charset = 'utf-8'/>
 		<script type = 'text/javascript' src = '../js/lang.js'></script>
+    <script type = 'text/javascript' src = '../js/gallery.js'></script>
 	</head>
 	<body>
     <header class = 'page'>
@@ -18,21 +19,26 @@
       </ul>
     </header>
     <ul class = 'content'>
-      <li><img src = '../img/gallery/1.jpeg' alt = '1' class = 'gallery'/></li>
-      <li><img src = '../img/gallery/2.jpeg' alt = '2' class = 'gallery'/></li>
-      <li><img src = '../img/gallery/3.jpeg' alt = '3' class = 'gallery'/></li>
-      <li><img src = '../img/gallery/4.jpeg' alt = '4' class = 'gallery'/></li>
-      <li><img src = '../img/gallery/5.jpeg' alt = '5' class = 'gallery'/></li>
-      <li><img src = '../img/gallery/6.jpeg' alt = '6' class = 'gallery'/></li>
+      <li><img src = '../img/gallery/1.jpeg' alt = '1' class = 'gallery' onclick = 'viewImage("../img/gallery/1.jpeg");'/></li>
+      <li><img src = '../img/gallery/2.jpeg' alt = '2' class = 'gallery' onclick = 'viewImage("../img/gallery/2.jpeg");'/></li>
+      <li><img src = '../img/gallery/3.jpeg' alt = '3' class = 'gallery' onclick = 'viewImage("../img/gallery/3.jpeg");'/></li>
+      <li><img src = '../img/gallery/4.jpeg' alt = '4' class = 'gallery' onclick = 'viewImage("../img/gallery/4.jpeg");'/></li>
+      <li><img src = '../img/gallery/5.jpeg' alt = '5' class = 'gallery' onclick = 'viewImage("../img/gallery/5.jpeg");'/></li>
+      <li><img src = '../img/gallery/6.jpeg' alt = '6' class = 'gallery' onclick = 'viewImage("../img/gallery/6.jpeg");'/></li>
     </ul>
     <footer>
       <ul class = 'lang'></ul>
       <span><date>2022</date> by wmgcat</span>
     </footer>
+    <div id = 'preview'>
+      <div class = 'shadow'></div>
+      <img alt = 'preview'/>
+    </div>
     <script type = 'text/javascript'>
       window.onload = () => {
         add_lang('../lang/ru.json');
         add_lang('../lang/en.json');
+        closePreview();
       }
     </script>
 	</body>
