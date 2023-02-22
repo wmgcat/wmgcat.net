@@ -1,35 +1,36 @@
 <!doctype html>
 <html>
 	<head>
-		<title>my web site</title>
-		<link rel = 'stylesheet' href = './default.css'/>
-		<meta name = 'viewport' content = 'width=device-width, initial-scale=1.0'/>
+		<title>games</title>
+		<link rel = 'stylesheet' href = '../css/main.css'/>
+		<link rel = 'stylesheet' href = '../css/games.css'/>
+    <meta name = 'viewport' content = 'width=device-width, initial-scale=1.0'/>
 		<meta charset = 'utf-8'/>
-		<script type = 'text/javascript' src = './web.js'></script>
+		<script type = 'text/javascript' src = '../js/lang.js'></script>
 	</head>
 	<body>
-		<div class = 'info'>
-			<h1 class = 'title'>не известно</h1>
-      <iframe id = 'gameframe' src = ''></iframe>
-			<p class = 'description'>нет описания</p>
-		</div>
-		<script type = 'text/javascript'>
-			
-			window.onload = function() {
-				let url = new URLSearchParams(window.location.search);
-				let frame = document.getElementById('gameframe');
-				frame.src = './games/' + url.get('name') + '/index.html';
-				add_config('./games/' + url.get('name') + '/config.js', function(e) {
-					document.querySelector('.info').style.width = data.width + 'px';
-					frame.height = data.height;
-					let title = document.querySelector('.title'), descr = document.querySelector('.description')
-					title.style.color = data.colour;
-					title.innerText = data.title;
-					
-					descr.width = data.width;
-					descr.innerText = data.description;
-				});
-			}
-		</script>
-	</body>
+    <header class = 'page'>
+		<a href = '../../index.html'><img src = '../img/avatar.png' class = 'avatar mini'/></a>
+      <ul class = 'menu'>
+        <li><a href = '#' class = 'link select' lang-id = 'games'>games</a></li>
+        <li><a href = './gallery.html' class = 'link' lang-id = 'gallery'>gallery</a></li>
+        <li><a href = './links.html' class = 'link' lang-id = 'links'>links</a></li>
+      </ul>
+    </header>
+    <ul class = 'content'>
+      <li><a href = 'https://wmgcat.itch.io'>itch.io page</a></li>
+      <li><a href = 'https://yandex.ru/games/developer?name=wmgcat'>yandex.games page</a></li>
+      <li><a href = 'https://vk.com/wmgcat'>my vk group</a></li>
+    </ul>      
+	  <footer>
+      <ul class = 'lang'></ul>
+      <span><date>2022</date> by wmgcat</span>
+    </footer>
+    <script type = 'text/javascript'>
+      window.onload = () => {
+        add_lang('../lang/ru.json');
+        add_lang('../lang/en.json');
+      }
+    </script>
+  </body>
 </html>
