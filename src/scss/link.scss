@@ -1,0 +1,12 @@
+.link {
+	display: flex;
+	flex-direction: row;
+	gap: 5%;
+	&__href {
+		color: $link;
+		text-decoration: underline;
+	}
+	&__title {
+		font-size: 1em;
+	}
+}
