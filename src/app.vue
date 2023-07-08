@@ -23,14 +23,20 @@
 					{
 						id: 'defender',
 						title: 'Защити флаг!',
-						description: "Спасите Капибару, накопив 1 миллион денег!",
-						link: 'https://yandex.ru/games/app/225844'
+						description: "Защищай флаг от нашествия врагов, прокачивай свои навыки и помощников!",
+						link: 'https://www.crazygames.com/game/flag-defender',
+						sublinks: {
+							ya: "https://yandex.ru/games/app/225844"
+						}
 					},
 					{
 						id: 'jujai',
 						title: 'Соединялки',
 						description: "Кормите и прокачивайте странных питомцев!",
-						link: 'https://yandex.ru/games/app/177870'
+						link: 'https://www.crazygames.com/game/connect-the-pets',
+						sublinks: {
+							ya: 'https://yandex.ru/games/app/177870'
+						}
 					},
 					{
 						id: 'skivltycoon',

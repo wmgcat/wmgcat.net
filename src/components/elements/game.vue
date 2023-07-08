@@ -12,11 +12,19 @@
 				<p class = 'description'>{{ description }}</p>
 			</div>
 		</a>
+		<div class = 'sublinks' v-if='typeof(sublinks) != "undefined"'>
+			<compLink v-for = '[linkid, href] of Object.entries(sublinks)'
+				:link = 'href'
+				:icon = 'linkid'
+			/>
+		</div>
 	</div>
 </template>
 
 <script>
+	import compLink from './listlink.vue';
 	export default {
-		props: ['id', 'title', 'description', 'link', 'noborder']
+		props: ['id', 'title', 'description', 'link', 'noborder', 'sublinks'],
+		components: { compLink }
 	}
 </script>

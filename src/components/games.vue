@@ -6,6 +6,7 @@
 			:description = 'game.description'
 			:link = 'game.link'
 			:noborder = 'game.noborder'
+			:sublinks = 'game.sublinks'
 		/>
 	</div>
 </template>

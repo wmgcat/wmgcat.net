@@ -7,7 +7,8 @@
 	grid-template-columns: repeat(3, 1fr);
 	column-gap: 20px;
 	row-gap: 30px;
-	padding: 5%
+	padding: 5%;
+	align-items: start;
 }
 
 @media screen and (max-width: 800px) {
@@ -112,5 +113,9 @@
 			font-size: 1.5em;
 			transition: color .5s ease;
 		}
+	}
+
+	.sublinks {
+		padding: 10px;
 	}
 }

@@ -7,7 +7,7 @@
 					:alt = 'icon'
 				/>
 			</span>
-			<h1 class = 'link__title'>{{ title }}</h1>
+			<h1 class = 'link__title' v-if = 'title'>{{ title }}</h1>
 		</a>
 	</div>
 </template>
