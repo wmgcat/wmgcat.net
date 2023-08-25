@@ -117,5 +117,11 @@
 
 	.sublinks {
 		padding: 10px;
+		flex-direction: row;
+		display: flex;
+		gap: 10px;
+		.link:hover {
+			transform: scale(.9);
+		}
 	}
 }

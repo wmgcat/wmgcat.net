@@ -21,12 +21,19 @@
 				// информация об играх:
 				games: [
 					{
+						id: 'feedme',
+						title: 'Накорми меня!',
+						description: "Собирайте самые креативные бутерброды во вселенной!",
+						link: 'https://yandex.ru/games/app/175689'
+					},
+					{
 						id: 'defender',
 						title: 'Защити флаг!',
 						description: "Защищай флаг от нашествия врагов, прокачивай свои навыки и помощников!",
 						link: 'https://www.crazygames.com/game/flag-defender',
 						sublinks: {
-							ya: "https://yandex.ru/games/app/225844"
+							ya: "https://yandex.ru/games/app/225844",
+							steam: "https://store.steampowered.com/app/2545760/Flag_Defender"
 						}
 					},
 					{
