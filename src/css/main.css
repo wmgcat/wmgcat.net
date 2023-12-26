@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 0;
+  background: #000;
+}
+body::before {
+  position: fixed;
+  content: '';
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(6px);
+  -webkit-filter: blur(6px);
+  background-image: url('../gif/background.gif');
+  /*background-size: cover;*/
+  background-position: 50% 50%;
+  z-index: -5;
+  opacity: .8;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 10%;
+  padding-top: 5%;
+  gap: 20px;
+}
+.content-photo {
+  width: 100%;
+}
+.content h1 {
+  color: #fff;
+  font-size: 5em;
+}
+.content p {
+  color: #fff;
+  font-size: 2em;
+  text-indent: 1em;
+}
+
+
+.social-link {
+  width: 10%;
+  height: auto;
+  aspect-ratio: 1;
+}
+.icon img {
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 5% 0;
+  gap: 20px;
+  width: 100%;
+}
+address a {
+  color: #fff;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+.social {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
+
+header {
+  background: #000;
+  width: 100%;
+  position: fixed;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1% 5%;
+  z-index: 100;
+  box-shadow: 0 0 10px #000;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: min-content;
+}
+.nav-link.select {
+  color: #fff096;
+  text-decoration: underline;
+}
+.like {
+  color: #f05064 !important;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.nav-link .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  min-width: 24px;
+}
+
+.nav-link > .like {
+  width: 5%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 10%;
+  width: 50%;
+}
+
+@media screen and (max-width: 250px) {
+  html { font-size: 10% !important; }
+  .content h1 {
+    font-size: 2.5em;
+  }
+  address {
+    display: none;
+  }
+
+  .games .game h1 {
+    display: none;
+  }
+  .fans .art {
+    width: 90% !important;
+  }
+  .art h1 {
+    font-size: .5em !important;
+  }
+
+}
+
+@media screen and (max-width: 300px) {
+  html { font-size: 40% !important; }
+  header {
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 5%;
+  }
+  header > .nav-link {
+    justify-content: center;
+  }
+  header .nav-link .icon {
+    display: none;
+  }
+  header nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .games .game {
+    width: 75%;
+  }
+  .fans .art {
+    width: 90% !important;
+  }
+ 
+}
+
+@media screen and (max-width: 450px) {
+  html { font-size: 50%; }
+  .content h1 { margin-top: 10%; }
+  .games, .arts {
+    display: flex !important;
+    margin-top: 10%;
+    gap: 30px !important;
+    padding: 10% 10% !important;
+  }
+  .game a { gap: 0; }
+  .game a h1 { margin-top: 0; }
+  .nav-link > .icon {
+    min-width: 12px;
+  }
+  .fans {
+    padding: 5% !important;
+  }
+  .fans .art {
+    width: 100px !important;
+  }
+}
+
+

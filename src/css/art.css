@@ -1,0 +1,12 @@
+.arts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 0;
+  padding: 10% 5%;
+  align-items: stretch;
+  aspect-ratio: 1;
+}
+
+.art {
+  width: 100%;
+}

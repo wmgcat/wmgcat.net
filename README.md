@@ -1,6 +1,5 @@
-# Мой сайт с играми с разных площадок
-## Стэк
-* Webpack
-* HTML5
-* CSS / SCSS
-* Javascript / Vue.js
+## English
+My website, written in html + css, without using Javascript
+
+## Русский
+Мой сайт, написанный на html + css, без использования Javascript
