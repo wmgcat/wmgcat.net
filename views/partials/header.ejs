@@ -1,0 +1,8 @@
+<header class = 'flex justify-between items-center'>
+  <a href = '/' class = 'flex justify-left items-center gap small link nav-link <%= select == "/" ? 'select' : '' %>'><img class = 'image very-small' src = '/src/svg/logo.svg'><span><%= __('button.home') %></span></a>
+  <nav class = 'flex justify-right items-center gap'>
+    <a href = '/games' class = 'link nav-link small <%= select == "games" ? 'select' : '' %>'><%= __('button.games') %></a>
+    <a href = '/creatives' class = 'link nav-link small <%= select == "creatives" ? 'select' : '' %>'><%= __('button.creatives') %></a>
+  </nav>
+</header>
+

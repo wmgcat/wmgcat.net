@@ -1,0 +1,25 @@
+.flex {
+  display: flex;
+  box-sizing: border-box;
+}
+
+.flex.fill {
+  width: 100%;
+}
+
+.justify-center { justify-content: center; }
+.justify-left { justify-content: start; }
+.justify-right { justify-content: end; }
+.justify-between { justify-content: space-between; }
+.justify-around { justify-content: space-around; }
+.items-center { align-items: center; }
+.items-top { align-items: start; }
+.items-bottom { align-items: end; }
+.items-stretch { align-items: stretch; }
+
+.gap { gap: .75em; }
+.outside { padding: .75em; }
+
+div.flex.small {
+  height: 5em;
+}

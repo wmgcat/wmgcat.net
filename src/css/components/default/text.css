@@ -1,0 +1,67 @@
+.description {
+  font-family: 'Roboto';
+  color: var(--clr-default);
+  cursor: default;
+}
+
+
+
+/* Размер текста: */
+.very-small { font-size: .75rem; }
+.small { font-size: 1.25rem; }
+.normal { font-size: 1.75rem; }
+.big { font-size: 2.25rem; }
+
+/* Доп. стили и эффекты: */
+.select { font-weight: bold; }
+.accent { color: #ff81ac; }
+.process { animation: animProcess 5s infinite; }
+.clr-black { color: #1e0528; }
+.clr-red { color: #f05064; }
+.clr-green { color: #acc656; }
+
+a[href] {
+  font-family: 'Roboto';
+  text-decoration: none;
+  cursor: pointer;
+}
+a[href] > * { cursor: pointer; }
+
+a.link { 
+  color: var(--clr-link);
+  cursor: pointer;
+  transition: color .2s ease;
+}
+a.link:hover {
+  color: var(--clr-link-hover);
+  text-decoration: underline;
+}
+a.clr-select, a.nav-link.select { color: var(--clr-select); }
+a.clr-select:hover, a.nav-link:hover, a.nav-link.select:hover { color: var(--clr-select-hover); }
+
+a.nav-link {
+  color: var(--clr-default);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+
+/* Заголовки:  */
+h1.title, h2.title, h3.title, h4.title, h5.title, h6.title {
+  font-family: 'Roboto';
+  color: var(--clr-select);
+  font-weight: bold;
+  font-size: 5em;
+  text-transform: lowercase;
+}
+h2.title { font-size: 4rem; }
+h3.title { font-size: 3.5rem; }
+h4.title { font-size: 3rem; }
+h5.title { font-size: 2.5rem; }
+h6.title { font-size: 2rem; }
+
+@keyframes animProcess {
+  0% { color: #fff096; }
+  50% { color: #ff8c64; }
+  100% { color: #fff096; }
+}

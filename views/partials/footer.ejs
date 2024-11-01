@@ -1,0 +1,51 @@
+<footer class = 'block vertical'>
+  <ul class = 'big block horizontal top right no-list no-padding'>
+    <li class = 'block small vertical right'>
+      <h6 class = 'title normal'><%= __('nav.links') %></h6>
+      <ul class = 'grid vertical no-list right no-padding'>
+        <li><a href = 'https://t.me/wmgcat' target = '_blank' class = 'link small'><%= __('link.blog') %></a></li>
+        <li><a href = 'https://wmgcat.itch.io' target = '_blank' class = 'link small'><%= __('link.itch') %></a></li>
+        <li><a href = 'https://wmgcat.newgrounds.com' target = '_blank' class = 'link small'><%= __('link.newgrounds') %></a></li>
+        <li><a href = 'https://github.com/wmgcat' target = '_blank' class = 'link small'><%= __('link.github') %></a></li>
+      </ul>
+    </li>
+    <li class = 'block small vertical right'>
+      <h6 class = 'title normal'><%= __('nav.pages') %></h6>
+      <ul class = 'grid vertical no-list right no-padding'>
+        <li><a href = '/' class = 'link small <%= select == "/" ? 'clr-select' : '' %>'><%= __('button.home') %></a></li>
+        <li><a href = '/games' class = 'link small <%= select == "games" ? 'clr-select' : '' %>'><%= __('button.games') %></a></li>
+        <li><a href = '/creatives' class = 'link small <%= select == "creatives" ? 'clr-select' : '' %>'><%= __('button.creatives') %></a></li>
+      </ul>
+    </li>
+    <li class = 'block small vertical right'>
+      <h6 class = 'title normal'><%= __('nav.langs') %></h6>
+      <ul class = 'grid vertical no-list right no-padding' id = 'langs'>
+        <% for (const lang of __h('lang')) { %>
+          <li><a class = 'small link' data-code = '<%= Object.keys(lang)[0] %>' onclick="setLocale('<%= Object.keys(lang)[0] %>')"><%= lang[Object.keys(lang)[0]] %></a></li>
+        <% } %>
+      </ul>
+    </li>
+  </ul>
+  <div class = 'flex justify-center items-center gap'>
+    <img class = 'image very-small' src = '/src/svg/logo.svg'>
+    <p class = 'description'><%= (new Date()).getFullYear() %> wmgcat.net, </p>
+    <address><a href = 'mailto:support@wmgcat.net' class = 'link'>support@wmgcat.net</a></address>
+  </div>
+
+  <script type = 'text/javascript'>
+    let code = getCookie('lang');
+    if (!code) {
+      setCookie('lang', 'en');
+      code = 'en';
+    }
+    
+    const lang = document.querySelector(`*[data-code="${code}"]`);
+    if (lang)
+      lang.classList.add('clr-select');
+
+    function setLocale(lang) {
+      setCookie('lang', lang);
+      window.location.reload();
+    }
+  </script>
+</footer>

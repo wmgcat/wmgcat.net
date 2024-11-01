@@ -1,0 +1,54 @@
+dialog {
+  border: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: none;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+dialog[open] {
+  display: flex;
+}
+
+dialog::before {
+  content: '';
+  background-color: #1e0528;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -10;
+  opacity: .9;
+}
+
+
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
+p.dialog-close {
+  position: absolute;
+  opacity: .5;
+  top: 0;
+  right: 0;
+  margin: 5% 0;
+  pointer-events: none;
+  transition: opacity .2s ease;
+}
+p.dialog-close:after {
+  content: " (Esc)";
+}
+
+dialog h3.title {
+  pointer-events: none;
+}

@@ -1,0 +1,9 @@
+.panel {
+  background: var(--clr-bg);
+  padding: 1rem;
+  box-sizing: border-boxs;
+  border-radius: 1rem;
+  box-shadow: var(--frame-shadow);
+  margin: 1rem;
+  max-width: 512px;
+}

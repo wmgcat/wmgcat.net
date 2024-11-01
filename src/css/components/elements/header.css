@@ -1,0 +1,8 @@
+header {
+  z-index: 100;
+  width: 100%;
+
+  background: var(--clr-bg);
+  box-shadow: var(--frame-shadow);
+  padding: .5em 1.5em;
+}

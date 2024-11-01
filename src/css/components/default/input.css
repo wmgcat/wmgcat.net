@@ -1,0 +1,169 @@
+input[type='text'], input[type='password'], input[type='email'] {
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-size: 1rem;
+  background: #fff;
+  border: 0;
+  padding: 1%;
+  outline: 0;
+  border: 1px solid #fff;
+  border-top: 2px solid #968796;
+  box-sizing: border-box;
+  width: 100%;
+}
+input[type='text']:focus, input[type='password']:focus, textarea:focus, input[type='password']:focus {
+  border: 1px solid #acc656;
+  border-top: 2px solid #968796;
+}
+
+input[type='submit'], button.delete {
+  font-family: 'Roboto';
+  background: #acc656;
+  border: 0;
+  outline: 0;
+  padding: 1%;
+  border-bottom: 2px solid #3c5564;
+  width: 100%;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+input[type='submit']:hover, button.delete:hover {
+  background: #acc656;
+  border-bottom: 0;
+  border-top: 2px solid #e1cde1;
+  cursor: pointer;
+}
+
+input[type='text']:focus, input[type='password']:focus {
+  border: 1px solid #f05064;
+  border-top: 2px solid #f05064;
+}
+
+button.delete {
+  color: #fff;
+  background: #f05064;
+  border-bottom: 2px solid #60150c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+button.delete:hover {
+  background: #f05064;
+}
+button.delete img {
+  width: 5%;
+}
+button.delete span {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+  outline: none;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  font-size: 1rem;
+  padding: 1%;
+  aspect-ratio: 16/4;
+  border-top: 2px solid #968796;
+  width: 100%;
+  font-family: 'Roboto';
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+input.error {
+  border: 1px solid #f05064;
+  background: #f05064;
+  color: #fff;
+}
+
+input[type='file'] {
+  display: none;
+}
+
+label.upload {
+  gap: 0;
+  padding: 0;
+  width: 100%;
+  aspect-ratio: 63/50;
+
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 2px dashed #000;
+  cursor: pointer;
+}
+label.upload.active {
+  background: #6eb4ff;
+  border: 2px dashed #fff;
+}
+label.upload.active span {
+  color: #fff;
+}
+label.upload.active img.preview {
+  opacity: .75;
+}
+label.upload span {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1em;
+}
+label.upload .preview {
+  width: 100%;
+}
+label.upload img.preview.upload {
+  width: 75%;
+}
+
+img.icon {
+  width: 2rem;
+  background: #1e0528;
+  border-radius: 50%;
+  padding: 2%;
+  border-top: .25rem solid #968796;
+}
+
+@keyframes shake {
+  0% {
+    margin-left: 0rem;
+  }
+  25% {
+    margin-left: 0.5rem;
+  }
+  75% {
+    margin-left: -0.5rem;
+  }
+  100% {
+    margin-left: 0rem;
+  }
+}
+
+input[type='checkbox'] {
+  appearance: none;
+  display: block;
+  aspect-ratio: 1/1;
+  width: 2rem;
+  background: url('/src/svg/disable.svg');
+  background-size: 100%;
+}
+input[type='checkbox']:checked {
+  display: block;
+  aspect-ratio: 1/1;
+  width: 2rem;
+  background: url('/src/svg/success.svg');
+  background-size: 100%;
+}

@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <title>wmgcat:error</title>
+    <%- include('../partials/meta'); %>
+    <%- include('../partials/link'); %>
+  </head>
+
+  <body>
+    <%- include('../partials/header', { select: '' }); %>
+    <div class = 'block more vertical'>
+      <h1 class = 'title'>error :(</h1>
+      <div class = 'block window vertical'>
+        <p class = 'description clr-black'><%= __('error.description') %>:</p>
+        <p class = 'description clr-red'><%= __(`error.401.${msg}`) %></p>
+      </div>
+    </div>
+    <%- include('../partials/footer', { select: '' }); %>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+#paginator > a {
+  background: var(--clr-bg);
+  box-shadow: var(--frame-shadow);
+  border-radius: 50%;
+  width: 3em;
+  aspect-ratio: 1/1;
+
+}
+#paginator > a.select {
+  background: var(--clr-select);
+  color: var(--clr-bg);
+}
+
+#paginator {
+  margin: 1.5em;
+  font-weight: bold;
+}

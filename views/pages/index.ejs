@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <title>wmgcat</title>
+    <%- include('../partials/meta'); %>
+    <%- include('../partials/link'); %>
+  </head>
+
+  <body>
+    <%- include('../partials/header', {
+      select: '/'
+    }); %>
+    <div class = 'block vertical'>
+      <h1 class = 'title'>wmgcat</h1>
+      <div class = 'block horizontal'>
+        <img src = './src/svg/logo.svg' class = 'image small'>
+        <div class = 'block vertical'>
+          <h4 class = 'title'><%= __('index.1.title') %></h4>
+          <p class = 'description normal'><%= __('index.1.description') %></p>
+          <a href = "mailto:support@wmgcat.net?subject=<%= __('subject.creative') %>&body=<%= __('subject.body') %>"><button class = 'btn clr-select'><%= __('button.send-creative') %></button></a>
+        </div>
+      </div>
+      <div class = 'grid no-padding games-small' id = 'games'>
+        <% if (content && content.games) {
+              content.games.forEach(game => {
+                %>
+                  <%- include('../partials/content/game', { game: game }); %>
+                <%
+              });
+        %>
+        <% } %>
+      </div>
+      <div class = 'block horizontal'>
+        <div class = 'block vertical'>
+          <h4 class = 'title'><%= __('index.2.title') %></h4>
+          <p class = 'description normal'><%= __('index.2.description') %></p>
+          <div class = 'block horizontal no-padding'>
+            <a href = '/games'><button class = 'btn clr-select'><%= __('button.games') %></button></a>
+            <a href = '/creatives'><button class = 'btn clr-select'><%= __('button.creatives') %></button></a>
+          </div>
+        </div>
+        <img src = './src/svg/png.svg' class = 'image big'>
+      </div>
+      <div class = 'grid no-padding arts-small' id = 'arts'>
+        <% if (content && content.creatives) {
+              content.creatives.forEach(creative => {
+                %>
+                  <%- include('../partials/content/creative', { creative: creative }); %>
+                <%
+              });
+        %>
+        <% } %>
+      </div>
+      <div class = 'block horizontal'>
+        <img src = './src/png/photo.png' class = 'image small shadow'>
+        <div class = 'block vertical'>
+          <h4 class = 'title'><%= __('index.3.title') %></h4>
+          <p class = 'description normal'><%= __('index.3.description') %></p>
+          <div class = 'flex justify-center items-center gap fill'>
+            <a href = 'https://t.me/wmgcat' target = '_blank' class = 'flex justify-center items-center btn'>
+              <img src = '/src/svg/links/telegram.svg' class = 'image normal'>
+            </a>
+            <a href = 'https://github.com/wmgcat' target = '_blank' class = 'flex justify-center items-center btn'>
+                <img src = '/src/svg/links/github.svg' class = 'image normal'>
+            </a>
+            <a href = 'https://wmgcat.itch.io' target = '_blank' class = 'flex justify-center items-center btn'>
+              <img src = '/src/svg/links/itch.svg' class = 'image normal'>
+            </a>
+            <a href = 'https://wmgcat.newgrounds.com' target = '_blank' class = 'flex justify-center items-center btn'>
+              <img src = '/src/svg/links/ng.svg' class = 'image normal'>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%- include('../partials/footer', { select: '/' }); %>
+  </body>
+</html>

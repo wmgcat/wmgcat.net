@@ -1,0 +1,27 @@
+.image {
+  box-sizing: border-box;
+  border-radius: 1rem;
+}
+
+.image.very-small {
+  width: 3em;
+}
+
+.image.banner {
+  width: 10%;
+  border-radius: 0;
+}
+
+.image.small {
+  width: 25%;
+}
+.image.normal {
+  width: 40%;
+}
+.image.big {
+  width: 100%;
+}
+.image.shadow {
+  box-shadow: 0 0 2rem #00000066;
+}
+

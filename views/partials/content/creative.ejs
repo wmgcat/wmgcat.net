@@ -1,0 +1,12 @@
+<div class = 'art'>
+  <div class = 'art-banner'>
+    <img src = '<%= creative.path %>' class = 'banner'/>
+  </div>
+  <div>
+    <% if (creative.link) { %>
+      <h1><a href = '<%= creative.link %>' target = '_blank' class = 'link'><%= creative.author %></a></h1>
+    <% } else { %>
+      <h1 class = 'clr-select'><%= creative.author %></h1>
+    <% } %>
+  </div>
+</div>

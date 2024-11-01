@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <title>wmgcat:<%= __(`button.${category}`) %></title>
+    <%- include('../partials/meta'); %>
+    <%- include('../partials/link'); %>
+  </head>
+
+  <body>
+    <%- include('../partials/header', {
+      select: category
+    }); %>
+    <div class = 'grid' id = 'content'>
+      <% if (typeof(games) != 'undefined') { %>
+        <% games.forEach(game => { %>
+          <%- include('../partials/content/game', { game: game }); %>
+        <% }); %>
+      <% } %>
+      <% if (typeof(creatives) != 'undefined') { %>
+        <% creatives.forEach(creative => { %>
+          <%- include('../partials/content/creative', { creative: creative }); %>
+        <% }); %>
+      <% } %>
+    </div>
+    <%- include('../partials/pagination', {
+      page: page,
+      pages: pages,
+      category: category
+    }); %>
+    <%- include('../partials/footer', { select: category }); %>
+  </body>
+</html>

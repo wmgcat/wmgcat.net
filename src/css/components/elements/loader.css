@@ -1,0 +1,14 @@
+#loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: 2s infinite alternate animLoader;
+}
+#loader img { width: 100%; }
+
+@keyframes animLoader {
+  0% { opacity: 1; }
+  50% { opacity: .5; }
+  100% { opacity: 1; }
+}

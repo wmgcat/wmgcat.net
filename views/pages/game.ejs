@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+  <head>
+    <title>wmgcat:<%= title %></title>
+    <%- include('../partials/meta', {
+      description: description,
+      banner: banner
+    }); %>
+    <%- include('../partials/link'); %>
+  </head>
+  
+  <body>
+    <%- include('../partials/header', {
+      select: ''
+    }); %>
+    <div class = 'block vertical more big'>
+      <div class = 'block big vertical left'>
+        <div class = 'flex items-center gap justify-between fill'>
+          <div class = 'flex items-center gap'>
+            <img src = '<%= banner %>' class = 'image banner'>
+            <h5 class = 'title' id = 'title'><%= title %></h5>
+            <% if (links.filter(x => x.type != 'wmgcat').length) { %>
+              <div class = 'flex gap items-center'>
+                <% links.filter(x => x.type != 'wmgcat').forEach(link => {
+                    %>
+                      <a href = '<%= link.href %>' target = '__blank' class = 'game-link image very-small'>
+                        <img src = '/src/svg/links/<%= link.type %>.svg'>
+                      </a>
+                    <%
+                  }); 
+                %>
+              </div>
+            <% } %>
+          </div>
+          <div class = 'flex justify-right items-center gap'>
+            <a href = 'https://boosty.to/wmgcat/donate' target = '__blank' class = 'flex justify-center items-center'>
+              <button class = 'btn clr-select small'><%= __('button.support') %></button>
+            </a>
+          </div>
+        </div>
+        <% if (path != '/nopage') { %>
+          <div class = 'block big no-padding iframe-block'>
+            <iframe id = 'frame' src = '<%= path %>' allowfullscreen></iframe>
+            <span class = 'fullscreen' onclick = 'funcFullscreen()'><img class = 'image very-small' src = '/src/svg/fullscreen.svg'></span>
+          </div>
+        <% } %>
+        
+        <div class = 'flex justify-between fill'>
+          
+          <p class = 'description small' id = 'description'><%= description %></p>
+        </div>
+      </div>
+    </div>
+    <%- include('../partials/footer', {
+      select: ''
+    }); %>
+    <script type = 'text/javascript'>
+      async function funcFullscreen() {
+        let elem = document.getElementById("frame");
+
+        if (!document.fullscreenElement) {
+          elem.requestFullscreen().catch((err) => {
+            alert(
+              `Error attempting to enable fullscreen mode: ${err.message} (${err.name})`,
+            );
+          });
+        } else {
+          document.exitFullscreen();
+        }
+      }
+    </script>
+  </body>
+</html>

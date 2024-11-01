@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  --clr-select: hsl(51, 99%, 79%);
+  --clr-select-hover: hsl(51, 99%, 50%);
+  --clr-link: hsl(263, 72%, 64%);
+  --clr-link-hover: hsl(263, 72%, 48%);
+  --clr-bg: hsl(282, 77%, 8%);
+  --clr-default: hsl(300, 99%, 97%);
+
+  --frame-shadow: 0 0 2rem #00000066;
+}

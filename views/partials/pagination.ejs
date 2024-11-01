@@ -1,0 +1,15 @@
+<div id = 'paginator' class = 'flex justify-center items-center gap'>
+  <% if (pages > 1) { %>
+    <% if (page <= 3) { %>
+      <a href = '/<%= category %>?page=1' class = 'flex justify-center items-center outside link nav-link <%= page == 1 ? "select" : "" %>'>1</a>
+    <% } %>
+    <% for (let i = Math.max(1, page - 3); i < Math.min(pages - 1, (page - 0) + 2); i++) { %>
+      <a href = '/<%= category %>?page=<%= i + 1 %>' class = 'flex justify-center items-center outside link nav-link <%= page == i + 1 ? "select" : "" %>'>
+          <%=i + 1%>
+      </a>
+    <% } %>
+    <% if (page > pages - 3) { %>
+      <a href = '/<%= category %>?page=<%= pages %>' class = 'flex justify-center items-center outside link nav-link <%= page == pages ? "select" : "" %>'><%= pages %></a>
+    <% } %>
+  <% } %>
+</div>
