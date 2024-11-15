@@ -32,6 +32,7 @@ app.use(i18n.init);
 app.use(cors());
 
 app.use('/api', proxy('http://localhost:3001'));
+app.use('/shop', proxy('http://localhost:3002'));
 
 app.get('/', async (req, res) => {
   try {
